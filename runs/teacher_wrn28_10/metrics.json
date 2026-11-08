@@ -1,0 +1,9 @@
+{
+  "params": 36479194,
+  "minutes": 227.1,
+  "raw_val_acc": 0.969,
+  "raw_val_acc_tta": 0.9732,
+  "ema_val_acc": 0.9684,
+  "ema_val_acc_tta": 0.974,
+  "selected": "ema"
+}

@@ -1,0 +1,12 @@
+# data (recreate with prepare_data.py)
+data/*.npz
+# large training artefacts: full checkpoints stay local, compact ones are in checkpoints/
+runs/**/model.pt
+runs/**/last.pt
+runs/**/test_logprobs.npy
+runs/speedtest*/
+logs/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+.venv/

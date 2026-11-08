@@ -1,0 +1,2 @@
+# One short epoch to check the GPU works and measure speed on this machine.
+speedtest   --model wrn28_3.5 --epochs 1 --aug ta+cutout

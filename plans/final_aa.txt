@@ -1,0 +1,3 @@
+# Final candidate: all 50,000 training images (no validation split), 300 epochs.
+# Use the recipe that won the 200-epoch comparison.
+final_wrn_aa_full --model wrn28_3.5 --epochs 300 --aug aa+cutout --val-size 0

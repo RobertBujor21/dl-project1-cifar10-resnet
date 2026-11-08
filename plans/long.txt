@@ -1,0 +1,4 @@
+# 200-epoch control run: cutout only, 5k validation split.
+# Compared against wrn_aa_200 and wrn_ta_200 (Kaggle) to see whether strong
+# augmentation pays off once training is long enough.
+wrn_cutout_200 --model wrn28_3.5 --epochs 200 --aug cutout

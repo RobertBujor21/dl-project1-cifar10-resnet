@@ -1,0 +1,6 @@
+# Recipe ablations, 60 epochs each, 5k validation split.
+# Compare with arch_wrn28_3.5 (cutout only): 96.24% val, 0.858 Kaggle.
+wrn_ta      --model wrn28_3.5 --epochs 60 --aug ta+cutout
+wrn_aa      --model wrn28_3.5 --epochs 60 --aug aa+cutout
+wrn_ta_mix  --model wrn28_3.5 --epochs 60 --aug ta+cutout --mix both
+wide_ta     --model resnet14_wide --epochs 60 --aug ta+cutout

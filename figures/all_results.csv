@@ -1,0 +1,16 @@
+run,model,params,epochs,train images,augmentation,teacher,val acc,Kaggle public,Kaggle private,minutes,hardware
+baseline,resnet18_slim,4707786,30,45000,cutout,,0.9408,,,9.2,Kaggle T4
+arch_resnet18_slim,resnet18_slim,4707786,60,45000,cutout,,0.9558,,,18.2,Kaggle T4
+arch_resnet14_wide,resnet14_wide,4902506,60,45000,cutout,,0.9602,,,20.7,Kaggle T4
+arch_wrn28_3.5,wrn28_3.5,4480474,60,45000,cutout,,0.9624,0.858,,20.9,Kaggle T4
+wrn_ta,wrn28_3.5,4480474,60,45000,TrivialAugment + cutout,,0.9568,0.853,,29.5,Kaggle T4
+wrn_aa,wrn28_3.5,4480474,60,45000,AutoAugment + cutout,,0.9584,0.86,,31.6,Kaggle T4
+wrn_ta_mix,wrn28_3.5,4480474,60,45000,TrivialAugment + cutout + mixup/CutMix,,0.951,0.84,,29.1,Kaggle T4
+wide_ta,resnet14_wide,4902506,60,45000,TrivialAugment + cutout,,0.96,,,28.3,Kaggle T4
+wrn_aa_200,wrn28_3.5,4480474,200,45000,AutoAugment + cutout,,,0.87,,,Kaggle T4
+wrn_cutout_200,wrn28_3.5,4480474,200,45000,cutout,,0.965,,,171.4,Apple GPU (MPS)
+teacher_wrn28_10,wrn28_10,36479194,150,45000,AutoAugment + cutout,,0.974,,,227.1,NVIDIA GeForce RTX 4060 Laptop GPU
+kd_wrn_aa_200,wrn28_3.5,4480474,200,45000,AutoAugment + cutout,WRN-28-10,0.9692,0.885,,122.1,NVIDIA GeForce RTX 4060 Laptop GPU
+final_wrn_aa_full,wrn28_3.5,4480474,300,50000,AutoAugment + cutout,,,0.888,,257.4,Apple GPU (MPS)
+final_kd_wrn_aa_full,wrn28_3.5,4480474,300,50000,AutoAugment + cutout,WRN-28-10,,0.895,,201.4,NVIDIA GeForce RTX 4060 Laptop GPU
+final_kd_wrn_aa_500,wrn28_3.5,4480474,500,50000,AutoAugment + cutout,WRN-28-10,,0.896,0.868,298.9,NVIDIA GeForce RTX 4060 Laptop GPU

@@ -1,0 +1,2 @@
+# One epoch of the large teacher model, to estimate how long teacher training takes.
+speedtest_teacher --model wrn28_10 --epochs 1 --aug aa+cutout --allow-over-limit

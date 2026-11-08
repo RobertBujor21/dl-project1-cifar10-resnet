@@ -1,0 +1,4 @@
+name,model,params,epochs,batch_size,lr,wd,aug,mix,label_smoothing,ema,teacher,val_size,val_acc_tta,selected,minutes
+speedtest,wrn28_3.5,4480474,1,128,0.1,0.0005,ta+cutout,none,0.1,0.999,,5000,0.4864,ema,0.9
+wrn_cutout_200,wrn28_3.5,4480474,200,128,0.1,0.0005,cutout,none,0.1,0.999,,5000,0.965,raw,171.4
+final_wrn_aa_full,wrn28_3.5,4480474,300,128,0.1,0.0005,aa+cutout,none,0.1,0.999,,0,,ema,257.4

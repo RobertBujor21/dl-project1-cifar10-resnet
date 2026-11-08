@@ -1,0 +1,6 @@
+name,model,params,epochs,batch_size,lr,wd,aug,mix,label_smoothing,ema,teacher,val_size,val_acc_tta,selected,minutes
+speedtest_teacher,wrn28_10,36479194,1,128,0.1,0.0005,aa+cutout,none,0.1,0.999,,5000,0.5654,ema,1.6
+teacher_wrn28_10,wrn28_10,36479194,150,128,0.1,0.0005,aa+cutout,none,0.1,0.999,,5000,0.974,ema,227.1
+kd_wrn_aa_200,wrn28_3.5,4480474,200,128,0.1,0.0005,aa+cutout,none,0.1,0.999,runs\teacher_wrn28_10\model.pt,5000,0.9692,ema,122.1
+final_kd_wrn_aa_full,wrn28_3.5,4480474,300,128,0.1,0.0005,aa+cutout,none,0.1,0.999,runs\teacher_wrn28_10\model.pt,0,,ema,201.4
+final_kd_wrn_aa_500,wrn28_3.5,4480474,500,128,0.1,0.0005,aa+cutout,none,0.1,0.999,runs\teacher_wrn28_10\model.pt,0,,ema,298.9

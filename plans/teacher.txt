@@ -1,0 +1,5 @@
+# Teacher for knowledge distillation: WRN-28-10 (36.5M parameters, never submitted).
+# Allowed by the project rules (teacher-student distillation); trained from scratch
+# on the same 45k training images, 5k validation split kept.
+# Adjust --epochs after the speed test so it finishes overnight.
+teacher_wrn28_10 --model wrn28_10 --epochs 150 --aug aa+cutout --allow-over-limit
